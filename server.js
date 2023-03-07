@@ -7,6 +7,9 @@ const mongoose = require("mongoose");
 const serverConfig = require("./configs/server.config");
 const dbConfig = require("./configs/db.config");
 
+//import init script
+const init = require("./init");
+
 //start express app
 const app = express();
 
@@ -23,11 +26,12 @@ db.on("error", () => {
 });
 db.once("open", () => {
   console.log("#### Connected to MongoDB ####");
+  init();
 });
 
 //plug roiutes
-require("./routes/auth.route")(app);
-require("./routes/user.route")(app);
+// require("./routes/auth.route")(app);
+// require("./routes/user.route")(app);
 
 //Start app
 app.listen(serverConfig.PORT, () => {
