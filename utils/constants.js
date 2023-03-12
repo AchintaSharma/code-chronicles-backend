@@ -1,5 +1,5 @@
 module.exports = {
-  defaultProfileImage: "",
+  defaultProfileImage: "defaultProfilePic.jpg",
   defaultBlogImage: "",
   defaultUserType: "User",
   defaultUserStatus: "Unregistered",

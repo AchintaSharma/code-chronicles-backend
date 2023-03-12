@@ -37,6 +37,7 @@ const findAllUsers = async (req, res) => {
 };
 
 const findUser = async (req, res) => {
+  //TODO: Allow this request only for admin and the owner user
   try {
     const user = await User.findOne({ _id: req.params.id });
     if (!user) {
@@ -57,6 +58,7 @@ const findUser = async (req, res) => {
 };
 
 const updateUser = async (req, res) => {
+  //TODO: Allow this request only for admin and the owner user
   if (!req.params.id) {
     return res.status(404).send({
       message: "Invalid request. User id not specified in params.",
@@ -99,6 +101,8 @@ const updateUser = async (req, res) => {
 };
 
 const deleteUser = async (req, res) => {
+  //TODO: Allow this request only for admin and the owner user
+
   try {
     const user = await User.findOneAndDelete({ _id: req.params.id });
     if (!user) {
@@ -108,7 +112,7 @@ const deleteUser = async (req, res) => {
     }
 
     res.status(200).send({
-      message: `User with id - ${req.params.id} deleted successfully.`,
+      message: `User ${user.name} deleted successfully.`,
     });
   } catch (err) {
     console.log("Error while deleting user: ", err.message);

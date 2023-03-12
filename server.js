@@ -31,7 +31,7 @@ db.once("open", () => {
 
 //plug routes
 require("./routes/auth.route")(app);
-// require("./routes/user.route")(app);
+require("./routes/user.route")(app);
 
 //Start app
 app.listen(serverConfig.PORT, () => {

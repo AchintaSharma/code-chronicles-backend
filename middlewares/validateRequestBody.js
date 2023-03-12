@@ -96,7 +96,7 @@ const validateSignUpRequestBody = async (req, res, next) => {
   }
 };
 
-const validateSignInRequestBody = (req, res, next) => {
+const validateLogInRequestBody = (req, res, next) => {
   if (!req.body.email) {
     return res.status(400).send({
       message: "Failed! Email Id is not provided",
@@ -114,5 +114,5 @@ const validateSignInRequestBody = (req, res, next) => {
 
 module.exports = {
   validateSignUpRequestBody,
-  validateSignInRequestBody,
+  validateLogInRequestBody,
 };

@@ -1,7 +1,7 @@
 const authController = require("../controllers/auth.controller");
 const {
   validateSignUpRequestBody,
-  validateSignInRequestBody,
+  validateLogInRequestBody,
 } = require("../middlewares/validateRequestBody");
 
 module.exports = (app) => {
@@ -13,7 +13,7 @@ module.exports = (app) => {
 
   app.get(
     "/cc/api/v1/auth/login",
-    validateSignInRequestBody,
+    validateLogInRequestBody,
     authController.login
   );
 };

@@ -12,7 +12,6 @@ module.exports = async () => {
       console.log(`#### ADMIN user is already present ####`);
       return;
     } else {
-      console.log(salt);
       const user = await User.create({
         name: "Achinta Sharma",
         email: "23achinta@gmail.com",

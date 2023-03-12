@@ -17,7 +17,7 @@ const blogSchema = new mongoose.Schema(
     },
     tags: {
       type: [String],
-      default: [],
+      default: [], //TODO: Check this later
     },
     imageURL: {
       type: String,
@@ -32,4 +32,4 @@ const blogSchema = new mongoose.Schema(
   { timestamps: true, versionKey: false }
 );
 
-module.exports = mongoose.model("User", blogSchema);
+module.exports = mongoose.model("Blog", blogSchema);
