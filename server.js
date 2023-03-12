@@ -29,8 +29,8 @@ db.once("open", () => {
   init();
 });
 
-//plug roiutes
-// require("./routes/auth.route")(app);
+//plug routes
+require("./routes/auth.route")(app);
 // require("./routes/user.route")(app);
 
 //Start app

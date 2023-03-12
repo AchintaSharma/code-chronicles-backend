@@ -1,7 +1,7 @@
 module.exports = {
   defaultProfileImage: "",
   defaultBlogImage: "",
-  defaultUserRole: "User",
+  defaultUserType: "User",
   defaultUserStatus: "Unregistered",
   userStatus: {
     unRegistered: "Unregistered",
